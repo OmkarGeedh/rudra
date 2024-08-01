@@ -56,8 +56,9 @@ export default function ForgetPassPage() {
         disabled={buttonDisabled}
         onClick={onForgetPass}
         >
-        {loading ? "Processing" : "ForgetPass"}
+        {loading ? "Processing" : "RESET"}
         </button>
+        <label className="text-white text-center mt-2">Remember your password? <a href="/login" className="text-blue-500">Login</a></label>
     </AuthBg>
     )
 }
