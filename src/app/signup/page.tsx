@@ -26,7 +26,7 @@ export default function SignupPage() {
     const [user, setUser] = React.useState({
         email: "",
         password: "",
-        username: "",
+        name: "",
     })
     const [buttonDisabled, setButtonDisabled] = React.useState(false);
     const [loading, setLoading] = React.useState(false);
@@ -48,7 +48,7 @@ export default function SignupPage() {
     }
 
     useEffect(() => {
-        if(user.email.length > 0 && user.password.length > 0 && user.username.length > 0) {
+        if(user.email.length > 0 && user.password.length > 0 && user.name.length > 0) {
             setButtonDisabled(false);
         } else {
             setButtonDisabled(true);
@@ -59,7 +59,7 @@ export default function SignupPage() {
     return (
     <AuthBg>
         <form onSubmit={handleSubmit}>
-        <div className="flex w-full flex-col items-start gap-0.5">
+        <div className="flex w-full flex-col items-start gap-0.8">
             <label htmlFor="email">Email</label>
             <input 
             className="py-1 px-2 w-full bg-[#5A7191]/60 rounded-lg focus:outline-none focus:border-gray-600 text-white"
@@ -70,19 +70,19 @@ export default function SignupPage() {
                 onChange={(e) => setUser({...user, email: e.target.value})}
                 placeholder="Email"
                 />
-        </div>
-        <div className="flex w-full flex-col items-start gap-0.5">
-            <label htmlFor="username">Name</label>
+        </div> 
+        <div className="flex w-full flex-col items-start gap-2">
+            <label htmlFor="name">Name</label>
             <input 
             className="py-1 px-2 w-full bg-[#5A7191]/60 rounded-lg focus:outline-none focus:border-gray-600 text-white"
-            id="username"
-            name="username"
+            id="name"
+            name="name"
                 type="text"
-                value={user.username}
-                onChange={(e) => setUser({...user, username: e.target.value})}
+                value={user.name}
+                onChange={(e) => setUser({...user, name: e.target.value})}
                 placeholder="Name"
                 />
-        </div>
+        </div> <br />
         <div className="flex w-full flex-col items-start gap-0.5">
             <label htmlFor="password">Password</label>
             <input 
@@ -95,6 +95,7 @@ export default function SignupPage() {
                 placeholder="Password"
                 />
         </div>
+        <br />
         <button
         type="submit" 
         className="p-2 mt-2 text-center w-full bg-gradient-to-b from-[#5A93C1]/60 to-[#235D8C]/60 rounded-lg  focus:outline-none focus:border-gray-600"

@@ -5,6 +5,7 @@ import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import AuthBg from "@/components/ui/AuthBg";
 
+
 export default function ForgetPassPage() {
     const router = useRouter();
     const [user, setUser] = React.useState({
@@ -37,8 +38,11 @@ export default function ForgetPassPage() {
         }
     }, [user]);
 
+   
+
     return (
     <AuthBg>
+        <form className="flex flex-col gap-2 w-full">
         <div className="flex w-full flex-col items-start gap-1">
             <label htmlFor="email">Email</label>
             <input 
@@ -59,6 +63,12 @@ export default function ForgetPassPage() {
         {loading ? "Processing" : "RESET"}
         </button>
         <label className="text-white text-center mt-2">Remember your password? <a href="/login" className="text-blue-500">Login</a></label>
+    </form>
     </AuthBg>
-    )
+    );
+};
+
+function useContext(GlobalContext: any): { loading: any; passwordRecoveryEmailError: any; sendPasswordRecoveryEmail: any; } {
+    throw new Error("Function not implemented.");
 }
+

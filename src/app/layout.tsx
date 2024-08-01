@@ -21,13 +21,15 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      <style>
+{/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap'); */}
+</style>
         <nav>
-        {!!session &&
+        {/* {!!session &&
         <Logout />
         }
         {!session &&
-        <Link href="/login">Login</Link>
-      }
+        <Link href="/login">Login</Link> */}
       </nav>
         {children}</body>
     </html>
