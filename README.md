@@ -12,6 +12,6 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-For Login page Open [http://localhost:3000/login](http://localhost:3000/login)
-For Signup page Open [http://localhost:3000/signup](http://localhost:3000/signup)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. <br />
+For Login page Open [http://localhost:3000/login](http://localhost:3000/login) <br />
+For Signup page Open [http://localhost:3000/signup](http://localhost:3000/signup) <br />
